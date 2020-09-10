@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>rachidweatherapp</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Weather web application" />
+<!-- font-awesome icons -->
+<link href="images/rwa.png" rel="shortcut icon"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<!-- //font-awesome icons -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="manifest" href="manifest.json">
+<link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+</head>
+<body><!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCWDecIadE50oncZww3-h6xRmjut8p2kG8",
+    authDomain: "rachidappweather.firebaseapp.com",
+    databaseURL: "https://rachidappweather.firebaseio.com",
+    projectId: "rachidappweather",
+    storageBucket: "rachidappweather.appspot.com",
+    messagingSenderId: "993182500992",
+    appId: "1:993182500992:web:cbe37d127d0f6c27c47e65",
+    measurementId: "G-MP9NLYF9S1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+	<div class="main">
+		<h1>application météo (Weather App) <br>
+			<p id="p1"></p>
+		 </h1>
+
+		<script>
+
+let date1 = new Date();
+
+let dateLocale = date1.toLocaleString('fr-FR',{
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'});
+
+document.getElementById('p1').innerHTML =  dateLocale;
+</script>
+		<div class="main_grids">
+			<div class="main_grid_left">
+				<div class="search">
+					<form >
+						<input type="text" id="inputCity" placeholder="type a city..." required="">
+						<input type="submit" >
+					</form>
+				</div>
+			</div>
+			<div class="main_grid_right">
+				<div class="agileits_main_grid_right">
+					<div id="city" class="box">
+							<h5>city</h5>
+					</div>
+					<div class="box_container">
+						<div id="" class="box">
+							
+						</div>
+						<div id="temp" class="box"><h5></h5> </div>
+						<div id="humidity" class="box"><h5></h5> </div>
+						<div id="wind" class="box"><h5></h5> </div>
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

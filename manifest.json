@@ -1,0 +1,16 @@
+{
+
+  "name": "rachidappweather",
+  "short_name": "Rachwap",
+  "start_url": "/",
+  "description":"application météo(weather app)",
+  "dir":"ltr",
+  "lang":"en",
+  "display": "standalone",
+  "icons":
+   [{
+    "src": "images/rwa.png",
+    "sizes": "720x720",
+    "type": "image/png"
+	}]
+  }
